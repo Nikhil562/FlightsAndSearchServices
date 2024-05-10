@@ -7,12 +7,24 @@ class CityRepository{
         })
         return city;
     }
-    async deleteCity({cityId}){
+    async deleteCity(cityId){
         const city=await City.drop({
             where :{
                 id:cityId
             }
         })
+    }
+    async updateCity(cirtyId,name){
+        const city = await City.update({
+            where:{
+                id:cityId
+            }
+        })
+        return city
+    }
+    async getCity(cityId){
+        const city = await City.findByPk(cityId);
+        return city;
     }
 }
 
