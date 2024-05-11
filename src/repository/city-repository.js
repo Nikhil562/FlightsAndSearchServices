@@ -35,7 +35,7 @@ class CityRepository {
             //         id: cityId
             //     }
             // });
-            const city = await findByPl(cityId);
+            const city = await City.findByPk(cityId);
             city.name = data.name;
             await city.save();
             return city;
