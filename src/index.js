@@ -28,7 +28,7 @@ const setupAndStartServer = async () => {
         //     modelNumber:"NewModel 4321"
         // })
         
-        console.log(airplane)
+        // console.log(airplane)
 
     });
 
